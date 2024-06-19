@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Pizza Calculator</h1>
+        <div id="div_dollar" onclick="mostrarCostos()">
+            <img src="img/money-svgrepo-com.svg" alt="Dollar sign icon" id="dollar_sign">
+        </div>
+        
+        <div id="costos_desplegable">
+            <span id="btn_cerrar" onclick="ocultarCostos()">X</span>
+            <li class="costos_desplegable_li">Costo Extra x Pizza ($)</li>
+            <input type="number" id="costo_extra" value="">
+            <li class="costos_desplegable_li">Costo Mano de Obra ($)</li>
+            <input type="number" id="costo_mano_obra" value="">
+            <button id="agregar_btn" onclick="agregarCostos()">Agregar</button>
+        </div>
+    </header>
+    <section id="pedido_input_output_wrapper">
+        <h2>Orden</h2>
+        <div id="pedido_input_output">
+            <div id="agregar_pizzas_select">
+                <div class="selects-agregar">
+                    <label for="cantidad">Cantidad:</label>
+                    <select name="Cantidad" id="cantidad">
+                    <option value="">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
+                    <option value="32">32</option>
+                    <option value="33">33</option>
+                    <option value="34">34</option>
+                    <option value="35">35</option>
+                    <option value="36">36</option>
+                    <option value="37">37</option>
+                    <option value="38">38</option>
+                    <option value="39">39</option>
+                    <option value="40">40</option>
+                    <option value="41">41</option>
+                    <option value="42">42</option>
+                    <option value="43">43</option>
+                    <option value="44">44</option>
+                    <option value="45">45</option>
+                    <option value="46">46</option>
+                    <option value="47">47</option>
+                    <option value="48">48</option>
+                    <option value="49">49</option>
+                    <option value="50">50</option>
+                    </select>
+                </div>
+                <div class="selects-agregar">
+                    <label for="size">Tamaño:</label>
+                    <select name="Size" id="sizePizza">
+                        <option value="Pequeña">Pequeña</option>
+                        <option value="Mediana">Mediana</option>
+                        <option value="Grande">Grande</option>
+                    </select>
+                </div>
+                <div class="selects-agregar">
+                    <label for="extras">Extras:</label>
+                    <input type="checkbox" id="ExtrasSioNo" name="extras">
+                </div>
+                <div class="selects-agregar">
+                    <button id="btn-agregar">Agregar</button>
+                </div>
+            </div>
+            <div id="lista_de_pizzas"></div>
+        </div>
+    </section>
+    <div id="botones">
+        <div>
+            <button id="ingresar-orden">Ingresar Orden</button>
+        </div>
+        <div>
+            <button id="cerrar-caja">Cerrar Caja</button>
+        </div>
+    </div>
+    <section id="costos_wrapper">
+        <h2 id="h2_costos">Costos</h2>
+        <div id="costos">
+            <section class="costos_box">
+                <div>
+                    <h4>Costos Variables</h4>
+                </div>
+                <div id="costos_variables"></div>
+            </section>
+            <section class="costos_box">
+                <div>
+                    <h4>Costos Fijos</h4>
+                </div>
+                <div id="costos_fijos"></div>
+            </section>
+            <section class="costos_box">
+                <div>
+                    <h4>Costos Totales</h4>
+                </div>
+                <div id="costos_totales"></div>
+            </section>
+            <section class="costos_box">
+                <div>
+                    <h4>Costos x Pizza</h4>
+                </div>
+                <div id="costos_totales_x_pizza"></div>
+            </section>
+        </div>
+    </section>
+    <script src="js/pizzaCalculator.js"></script>
+    <script src="js/view.js"></script>
+</body>
+</html>
